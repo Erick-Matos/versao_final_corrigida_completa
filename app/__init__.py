@@ -38,6 +38,7 @@ def create_app():
     # Cria tabelas e admin
     with app.app_context():
         # db.create_all()  # substituído por Flask-Migrate em produção
+        db.create_all()  # Garante criação das tabelas no Postgres
         from werkzeug.security import generate_password_hash
         from app.models import Usuario
 
